@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1500dp">
+
+        <TextView
+            android:id="@+id/textViewPieChart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="0dp"
+            android:gravity="center|center_horizontal"
+            android:text="Status of Leave Applied"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewBarChart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="715dp"
+            android:layout_marginEnd="0dp"
+            android:gravity="center|center_horizontal"
+            android:text="Types of Leave Applied"
+            android:textSize="18sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ConstraintPieChart"
+            android:layout_width="match_parent"
+            android:layout_height="525dp"
+            android:layout_below="@+id/textViewPieChart"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="55dp"
+            android:background="#4C4C4C">
+
+            <ProgressBar
+                android:id="@+id/progressBarPieChart"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/PieChart"
+                app:layout_constraintEnd_toEndOf="@+id/PieChart"
+                app:layout_constraintStart_toStartOf="@+id/PieChart"
+                app:layout_constraintTop_toTopOf="@+id/PieChart" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/PieChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="35dp"></com.github.mikephil.charting.charts.PieChart>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/editTextDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="675dp"
+            android:layout_marginEnd="30dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EditEmailTextLayout" />
+
+        <View
+            android:id="@+id/editTextDivider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="1415dp"
+            android:layout_marginEnd="30dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EditEmailTextLayout" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ConstraintBarChart"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_below="@+id/textViewBarChart"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="55dp"
+            android:background="#4C4C4C">
+
+            <ProgressBar
+                android:id="@+id/progressBarBarChart"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/BarChart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/BarChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"></com.github.mikephil.charting.charts.BarChart>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

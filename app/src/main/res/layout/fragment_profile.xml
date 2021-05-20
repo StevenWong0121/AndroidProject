@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="closeKeyBoard">
+
+    <Button
+        android:id="@+id/resetPasswordButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/login_button"
+        android:text="Reset Password"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:background="#757575"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_profile" />
+
+    <TextView
+        android:id="@+id/textProfileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="65dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="TextName"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/imageProfile"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Age"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/imageProfile"
+        app:layout_constraintTop_toBottomOf="@+id/textProfileName" />
+
+    <TextView
+        android:id="@+id/textGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_gender"
+        android:drawablePadding="15dp"
+        android:text="Gender"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageProfile" />
+
+    <TextView
+        android:id="@+id/textPhoneNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_phone"
+        android:drawablePadding="15dp"
+        android:text="Phone Number"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textGender" />
+
+    <TextView
+        android:id="@+id/textEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="15dp"
+        android:text="TextEmail"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPhoneNo" />
+
+    <View
+        android:id="@+id/OriDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEmail" />
+
+    <View
+        android:id="@+id/editTextDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditEmailTextLayout" />
+
+    <TextView
+        android:id="@+id/textEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawableTop="@drawable/ic_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textSaveEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawableTop="@drawable/ic_done"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.finalyearproject2.CustomTextInputLayout
+        android:id="@+id/EditNameTextLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="70dp"
+        android:textColorHint="#FFFFFF"
+        android:visibility="invisible"
+        app:errorTextColor="#FFDBDB"
+        app:hintTextColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/imageProfile"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/EditName"
+            android:layout_width="201dp"
+            android:layout_height="30dp"
+            android:background="@drawable/round_textbox"
+            android:gravity="left|center_vertical"
+            android:hint="Name"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textCursorDrawable="@drawable/white_cursor" />
+    </com.example.finalyearproject2.CustomTextInputLayout>
+
+    <com.example.finalyearproject2.CustomTextInputLayout
+        android:id="@+id/EditGenderTextLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="25dp"
+        android:textColorHint="#FFFFFF"
+        android:visibility="invisible"
+        app:errorTextColor="#FFDBDB"
+        app:hintTextColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditAgeTextLayout">
+
+        <EditText
+            android:id="@+id/EditGender"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:background="@drawable/round_textbox"
+            android:gravity="left|center_vertical"
+            android:hint="Gender"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textCursorDrawable="@drawable/white_cursor"
+            android:textSize="14sp" />
+    </com.example.finalyearproject2.CustomTextInputLayout>
+
+    <com.example.finalyearproject2.CustomTextInputLayout
+        android:id="@+id/EditPhoneTextLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="25dp"
+        android:textColorHint="#FFFFFF"
+        android:visibility="invisible"
+        app:errorTextColor="#FFDBDB"
+        app:hintTextColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditGenderTextLayout">
+
+        <EditText
+            android:id="@+id/EditPhone"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:background="@drawable/round_textbox"
+            android:gravity="left|center_vertical"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:paddingLeft="20dp"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textCursorDrawable="@drawable/white_cursor"
+            android:textSize="14sp" />
+    </com.example.finalyearproject2.CustomTextInputLayout>
+
+    <com.example.finalyearproject2.CustomTextInputLayout
+        android:id="@+id/EditAgeTextLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:textColorHint="#FFFFFF"
+        android:visibility="invisible"
+        app:errorTextColor="#FFDBDB"
+        app:hintTextColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/imageProfile"
+        app:layout_constraintTop_toBottomOf="@+id/EditNameTextLayout">
+
+        <EditText
+            android:id="@+id/EditAge"
+            android:layout_width="128dp"
+            android:layout_height="30dp"
+            android:background="@drawable/round_textbox"
+            android:gravity="left|center_vertical"
+            android:hint="Age"
+            android:inputType="number"
+            android:paddingLeft="20dp"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textCursorDrawable="@drawable/white_cursor"
+            android:textSize="14sp" />
+    </com.example.finalyearproject2.CustomTextInputLayout>
+
+    <com.example.finalyearproject2.CustomTextInputLayout
+        android:id="@+id/EditEmailTextLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="25dp"
+        android:textColorHint="#FFFFFF"
+        android:visibility="invisible"
+        app:errorTextColor="#FFDBDB"
+        app:hintTextColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditPhoneTextLayout">
+
+        <EditText
+            android:id="@+id/EditEmail"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:background="@drawable/round_textbox"
+            android:gravity="left|center_vertical"
+            android:hint="E-Mail"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textCursorDrawable="@drawable/white_cursor" />
+    </com.example.finalyearproject2.CustomTextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarEditProfile"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageCaptureImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageProfile"
+        app:layout_constraintEnd_toEndOf="@+id/imageProfile"
+        app:srcCompat="@drawable/ic_camera" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

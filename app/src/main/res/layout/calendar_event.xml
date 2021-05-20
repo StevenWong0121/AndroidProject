@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/textCalendarEventDate"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="104dp"
+        android:gravity="center"
+        android:text="Calendar"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/EventNotFoundText"
+        android:layout_width="188dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/textCalendarEventDate"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="81dp"
+        android:gravity="center"
+        android:text="No event(s) found."
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <ListView
+        android:id="@+id/EventList"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="68dp">
+    </ListView>
+
+</RelativeLayout>
